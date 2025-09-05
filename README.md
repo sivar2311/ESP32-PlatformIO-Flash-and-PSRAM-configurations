@@ -1,6 +1,6 @@
 # ESP32 PlatformIO Flash and PSRAM configurations
 
-## ESP32-C5-WROOM-(1/1U)
+## ESP32-C5-WROOM-(1/1U) - [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-c5-wroom-1_wroom-1u_datasheet_en.pdf)
 | Module                            |    Flash     |    PSRAM    |
 | --------------------------------- | :----------: | :---------: |
 | [ESP32-C5-WROOM-(1/1U)-N4](#esp32-c5-wroom-11u-n4)       | 4 MB (Quad)  |      -      |
@@ -8,13 +8,13 @@
 | [ESP32-C5-WROOM-(1/1U)-N16R4](#esp32-c5-wroom-11u-n16r4) | 16 MB (Quad) | 4 MB (Quad) |
 
 
-## ESP32-S3
+## ESP32-S3 - [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf)
 | Module                            |    Flash    |    PSRAM    |
 | --------------------------------- | :---------: | :---------: |
 | [ESP32-S3-FN8](#esp32-s3-fn8)     | 8 MB (Quad) |      -      |
 | [ESP32-S3-FH4R2](#esp32-s3-fh4r2) | 4 MB (Quad) | 2 MB (Quad) |
 
-## ESP32-S3-WROOM-(1/1U)
+## ESP32-S3-WROOM-(1/1U) - [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf)
 | Module                                                         |    Flash     |     PSRAM     |
 | -------------------------------------------------------------- | :----------: | :-----------: |
 | [ESP32-S3-WROOM-(1/1U)-(N/H)4](#esp32-s3-wroom-11u-nh4)        | 4 MB (Quad)  |       -       |
@@ -28,13 +28,13 @@
 | [ESP32-S3-WROOM-(1/1U)-N16R8](#esp32-s3-wroom-11u-n16r8)       | 16 MB (Quad) | 8 MB (Octal)  |
 | [ESP32-S3-WROOM-(1/1U)-N16R16(V)](#esp32-s3-wroom-11u-n16r16v) | 16 MB (Quad) | 16 MB (Octal) |
 
-## ESP32-S3-WROOM-2
+## ESP32-S3-WROOM-2 - [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-2_datasheet_en.pdf)
 | Module                                              | Flash        |    PSRAM    |
 | --------------------------------------------------- | :----------- | :---------: |
 | [ESP32-S3-WROOM-2-N16R8V](#esp32-s3-wroom-2-n16r8v) | 16MB (Octal) | 8MB (Octal) |
 | [ESP32-S3-WROOM-2-N32R8V](#esp32-s3-wroom-2-n32r8v) | 32MB (Octal) | 8MB (Octal) |
 
-## ESP32-S3-MINI-(1/1U)
+## ESP32-S3-MINI-(1/1U) - [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-mini-1_mini-1u_datasheet_en.pdf)
 | Module                                               |   Flash    |    PSRAM    |
 | ---------------------------------------------------- | :--------: | :---------: |
 | [ESP32-S3-MINI-(1/1U)-N4R2](#esp32-s3-mini-11u-n4r2) | 4MB (Quad) | 2 MB (Quad) |
