@@ -103,6 +103,7 @@ framework = arduino
 board_build.flash_mode = qio
 board_upload.flash_size = 8MB
 board_upload.maximum_size = 8388608
+board_build.partitions = default_8MB.csv
 ```
 
 ## ESP32-S3-FH4R2
@@ -148,6 +149,7 @@ framework = arduino
 board_build.flash_mode = qio
 board_upload.flash_size = 8MB
 board_upload.maximum_size = 8388608
+board_build.partitions = default_8MB.csv
 ```
 
 ## ESP32-S3-WROOM-(1/1U)-N16
@@ -195,6 +197,7 @@ board_build.flash_mode = qio
 board_build.psram_type = qio
 board_upload.flash_size = 8MB
 board_upload.maximum_size = 8388608
+board_build.partitions = default_8MB.csv
 board_build.extra_flags = 
   -DBOARD_HAS_PSRAM
 ```
@@ -248,6 +251,7 @@ board_build.flash_mode = qio
 board_build.psram_type = opi
 board_upload.flash_size = 8MB
 board_upload.maximum_size = 8388608
+board_build.partitions = default_8MB.csv
 board_build.extra_flags = 
   -DBOARD_HAS_PSRAM
 ```
@@ -352,4 +356,5 @@ framework = arduino
 board_build.flash_mode = qio
 board_upload.flash_size = 8MB
 board_upload.maximum_size = 8388608
+board_build.partitions = default_8MB.csv
 ```
