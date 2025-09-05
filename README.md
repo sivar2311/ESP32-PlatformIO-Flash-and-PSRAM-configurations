@@ -1,11 +1,18 @@
-# ESP32-S3 PlatformIO Flash and PSRAM configurations
+# ESP32 PlatformIO Flash and PSRAM configurations
+
+## ESP32-C5-WROOM-(1/1U)
+| Module                            |    Flash     |    PSRAM    |
+| --------------------------------- | :----------: | :---------: |
+| [ESP32-C5-WROOM-(1/1U)-N4](#esp32-c5-wroom-11u-n4)       | 4 MB (Quad)  |      -      |
+| [ESP32-C5-WROOM-(1/1U)-N8R4](#esp32-c5-wroom-11u-n8r4)   | 8 MB (Quad)  | 4 MB (Quad) |
+| [ESP32-C5-WROOM-(1/1U)-N16R4](#esp32-c5-wroom-11u-n16r4) | 16 MB (Quad) | 4 MB (Quad) |
+
 
 ## ESP32-S3
 | Module                            |    Flash    |    PSRAM    |
 | --------------------------------- | :---------: | :---------: |
 | [ESP32-S3-FN8](#esp32-s3-fn8)     | 8 MB (Quad) |      -      |
 | [ESP32-S3-FH4R2](#esp32-s3-fh4r2) | 4 MB (Quad) | 2 MB (Quad) |
-|                                   |             |             |
 
 ## ESP32-S3-WROOM-(1/1U)
 | Module                                                         |    Flash     |     PSRAM     |
@@ -34,6 +41,56 @@
 | [ESP32-S3-MINI-(1/1U)-N8](#esp32-s3-mini-11u-n8)     | 8MB (Quad) |      -      |
 
 # Configurations
+
+## ESP32-C5-WROOM-(1/1U)-N4
+```ini
+; Flash: 4MB QD, no PSRAM
+[env:esp32-c5-devkitc-1]
+platform = espressif32
+board = esp32-c5-devkitc-1
+framework = arduino
+```
+***Note**: The ESP32-C5 requires Arduino 3.x based on ESP-IDF 5.5, which is not officially supported by PlatformIO. 
+You must use the [pioarduino fork of the Espressif32 platform](https://github.com/pioarduino/platform-espressif32)!*
+
+## ESP32-C5-WROOM-(1/1U)-N8R4
+```ini
+; Flash: 8MB QD, PSRAM: 4MB QD
+[env:esp32-c5-devkitc-1]
+platform = espressif32
+board = esp32-c5-devkitc-1
+framework = arduino
+
+board_build.arduino.memory_type = qio_qspi
+board_build.flash_mode = qio
+board_upload.flash_size = 8MB
+board_upload.maximum_size = 8388608
+board_build.partitions = default_8MB.csv
+board_build.extra_flags = 
+  -DBOARD_HAS_PSRAM
+```
+***Note**: The ESP32-C5 requires Arduino 3.x based on ESP-IDF 5.5, which is not officially supported by PlatformIO. 
+You must use the [pioarduino fork of the Espressif32 platform](https://github.com/pioarduino/platform-espressif32)!*
+
+## ESP32-C5-WROOM-(1/1U)-N16R4
+```ini
+; Flash: 16MB QD, PSRAM: 4MB QD
+[env:esp32-c5-devkitc-1]
+platform = espressif32
+board = esp32-c5-devkitc-1
+framework = arduino
+
+board_build.arduino.memory_type = qio_qspi
+board_build.flash_mode = qio
+board_build.psram_type = qio
+board_upload.flash_size = 16MB
+board_upload.maximum_size = 16777216
+board_build.partitions = default_16MB.csv
+board_build.extra_flags = 
+  -DBOARD_HAS_PSRAM
+```
+***Note**: The ESP32-C5 requires Arduino 3.x based on ESP-IDF 5.5, which is not officially supported by PlatformIO. 
+You must use the [pioarduino fork of the Espressif32 platform](https://github.com/pioarduino/platform-espressif32)!*
 
 ## ESP32-S3-FN8
 ```ini
